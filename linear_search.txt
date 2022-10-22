@@ -1,0 +1,45 @@
+//Linear Search Program(code) in Java
+
+import java.io.*;
+import java.util.*;
+
+class Linear_Search{
+
+public static void main(String []arg){
+
+try{							//For Exception
+
+int key,i;
+DataInputStream as=new DataInputStream(System.in);
+int s=4;
+while(s!=0){
+
+System.out.println("\nEnter the value that you Want:-");		//	Take input from user(what he wants to search).
+key=Integer.parseInt(as.readLine());
+
+int a[]=new int[]{12,34,7,8,55,1,2,3,5,0,11,20};			//	predefined array(by us).You can take it from user also.
+
+for(i=0;i<a.length;i++)
+{
+	if(a[i]==key)
+		{
+		System.out.println("\nThe given " +key+ " number is Found");		//for Successful Search.(number found)
+		break;
+		}
+}
+
+if(i==a.length){
+System.out.println("\nThe given number is not Found");					//for unsucccessful Search.(number not found)	
+}
+
+s--;
+System.out.println("\nYou only " +s+ " chance remaining");
+}
+
+}catch(Exception e){
+System.out.println(e);
+}
+
+}
+
+}
